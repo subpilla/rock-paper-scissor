@@ -1,0 +1,108 @@
+Based on Feature requirements all posssible tests written in the form of BDD Gherkin-style
+
+Positive User Scenario's: (HUMAN_COMPUTER)
+==========================
+
+Feature: RockPaperScissors Game Integration Test Scenarios
+
+ScenarioOutline: Test all possible combinations for rock vs paper, rock , scissors provided players are computer vs user/user vs computer
+
+Given <player1> chooses rock
+
+And <player2> chooses <option>
+
+Then <player>  <status> the game
+
+
+Examples:
+
+|player1    |     player2   |   option      |     player    |   status  |
+
+|user       |     computer  |   Rock        |      user     |   Tie     |
+
+|user       |     computer  |   Paper       |      user     |   Loose   |
+
+|user       |     computer  |   Scissors    |      user     |   Win     |
+
+|computer   |     user      |   Rock        |      user     |   Tie     |
+
+|computer   |     user      |   Paper       |      user     |   Loose   |
+
+|computer   |     user      |   Scissors    |      user     |   Win     |
+
+
+ScenarioOutline:Test all possible combinations for paper vs paper, rock , scissors provided players are computer vs user/user vs computer
+
+Given <player1> chooses paper
+
+And <player2>   chooses <option>
+
+Then <player>  <status> the game
+
+Examples:
+
+|player1    |     player2  |   option      |     player      |  status  |
+
+|user       |    computer  |    Rock       |       user      |  win     |
+
+|user       |    computer  |    Paper      |       user      |  Tie     |
+
+|user       |    computer  |    Scissors   |       user      |  Loose   |
+
+|computer   |    user      |    Rock       |       user      |  win     |
+
+|computer   |    user      |    Paper      |       user      |  Tie     |
+
+|computer   |    user      |    Scissors   |       user      |  Loose   |
+
+
+
+ScenarioOutline: Test all possible combinations for scissors vs paper, rock , scissors provided players are computer vs user/user vs computer
+
+Given <player1> chooses scissors
+
+And <player2> chooses <option>
+
+Then <player>  <status> the game
+
+
+Examples:
+
+|player1    |     player2  |   option      |     player       |  status  |
+
+|user       |   computer   |     Rock      |       user       |  Loose   |
+
+|user       |   computer   |     Paper     |       user       |  Win     |
+
+|user       |   computer   |     Scissors  |       user       |  Tie     |
+
+|computer   |   user       |     Rock      |       user       |  Loose   |
+
+|computer   |   user       |     Paper     |       user       |  Win     |
+
+|computer   |   user       |     Scissors  |       user       |  Tie     |
+
+
+
+Negative User Scenario's:
+==========================
+
+Scenario: Test user provides invalid input gesture, System responds with "error message"
+
+Given user chooses HUMAN_COMPUTER
+
+And  provides gesture 'Papppr'
+
+Then system should responds as 'Please choose one of the following gestures: Rock Paper Scissor'
+
+Scenario: Test user provides invalid input, System responds with "error message"
+
+
+Scenario: Test user provides blank gesture, System responds with "error message"
+
+Given user chooses HUMAN_COMPUTER
+
+And  enters gesture as 'Blank'
+
+Then system should responds as 'Please choose one of the following gestures: Rock Paper Scissor '
+
