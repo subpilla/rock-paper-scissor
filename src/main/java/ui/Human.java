@@ -27,10 +27,13 @@ public class Human extends Player {
         this.reader = new BufferedReader(new InputStreamReader(inputStream));
     }
 
+
+    @Override
     public String toString(){
         return "Human";
     }
 
+    @Override
     public Gesture _throw() {
         while (true) {
             try {
@@ -42,9 +45,11 @@ public class Human extends Player {
                         matchedGesture = gesture;
                     }
                 }
-                if (matchedGesture != null)
+                if (matchedGesture != null){
                     return matchedGesture;
+                }
             } catch (IOException e) {
+                //unused
             }
         }
     }

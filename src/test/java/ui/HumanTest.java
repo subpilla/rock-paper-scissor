@@ -3,7 +3,10 @@ package ui;
 import game.Gesture;
 import org.junit.Test;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,6 +18,7 @@ import static org.junit.Assert.assertEquals;
 public class HumanTest {
 
     List<Gesture> gestures = Arrays.<Gesture>asList(Gesture.Scissor, Gesture.Paper, Gesture.Rock);
+
 
     @Test
     public void shouldChooseScissorGesture() {

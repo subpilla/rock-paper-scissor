@@ -8,3 +8,9 @@
 .idea/modules.xml
 .idea/rock-paper-scissor.iml
 .idea/workspace.xml
+.idea/libraries/
+.idea/uiDesigner.xml
+src/main/resources/
+target/generated-sources/
+target/generated-test-sources/
+*.class

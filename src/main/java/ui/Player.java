@@ -8,4 +8,5 @@ import game.Gesture;
 public abstract class Player {
 
     abstract Gesture _throw();
+
 }

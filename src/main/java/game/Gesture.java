@@ -10,36 +10,42 @@ import static game.Result.WIN;
 public enum Gesture {
 
     Paper() {
-        @Override public Result defeats(Gesture c) {
-            if (c == Scissor)
+        @Override
+        public Result defeats(Gesture c) {
+            if (c == Scissor) {
                 return LOSE;
-            else if (c == Rock)
+            } else if (c == Rock) {
                 return WIN;
-            else
+            } else {
                 return TIE;
+            }
         }
 
     },
 
     Rock() {
-        @Override public Result defeats(Gesture c) {
-            if (c == Paper)
+        @Override
+        public Result defeats(Gesture c) {
+            if (c == Paper) {
                 return LOSE;
-            else if (c == Scissor)
+            } else if (c == Scissor) {
                 return WIN;
-            else
+            } else {
                 return TIE;
+            }
         }
     },
 
     Scissor() {
-        @Override public Result defeats(Gesture c) {
-            if (c == Rock)
+        @Override
+        public Result defeats(Gesture c) {
+            if (c == Rock) {
                 return LOSE;
-            else if (c == Paper)
+            } else if (c == Paper) {
                 return WIN;
-            else
+            } else {
                 return TIE;
+            }
         }
     };
 

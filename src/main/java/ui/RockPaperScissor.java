@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import static game.Player.PLAYER1;
+import static game.Players.PLAYER1;
 import static ui.RockPaperScissor.GameMode.HUMAN_COMPUTER;
 
 /**

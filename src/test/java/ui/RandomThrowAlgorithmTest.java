@@ -15,7 +15,7 @@ import static org.junit.Assert.assertEquals;
  */
 public class RandomThrowAlgorithmTest {
 
-    List<Gesture> gestures = Arrays.<Gesture> asList(Gesture.Scissor, Gesture.Rock, Gesture.Paper);
+    List<Gesture> gestures = Arrays.asList(Gesture.Scissor, Gesture.Rock, Gesture.Paper);
 
     @Test
     public void shouldHaveChosenAllGestures() {

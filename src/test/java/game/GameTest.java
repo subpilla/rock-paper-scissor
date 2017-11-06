@@ -2,7 +2,7 @@ package game;
 
 import org.junit.Test;
 
-import static game.Player.PLAYER1;
+import static game.Players.PLAYER1;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

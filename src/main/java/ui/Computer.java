@@ -16,15 +16,18 @@ public class Computer extends Player {
         this(gestures, "Computer");
     }
 
-    public String toString(){
-        return this.name;
-    }
-
     public Computer(List<Gesture> gestures, String computerName) {
         this.throwAlgorithm = new RandomThrowAlgorithm(gestures);
         this.name = computerName;
     }
 
+    @Override
+    public String toString(){
+        return this.name;
+    }
+
+
+    @Override
     public Gesture _throw() {
         return throwAlgorithm._throw();
     }

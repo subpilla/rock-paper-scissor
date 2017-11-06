@@ -1,10 +1,12 @@
 package game;
 
+import com.sun.istack.internal.NotNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import static game.Player.PLAYER1;
-import static game.Player.PLAYER2;
+import static game.Players.PLAYER1;
+import static game.Players.PLAYER2;
 import static game.Result.WIN;
 
 /**
@@ -32,12 +34,14 @@ public class Game {
         this.player2Gesture = gesture;
     }
 
-    public Player getWinner() {
+    @NotNull
+    public Players getWinner() {
         Result result = this.player1Gesture.defeats(this.player2Gesture);
-        if (result == WIN)
+        if (result == WIN) {
             return PLAYER1;
-        else
+        } else {
             return PLAYER2;
+        }
     }
 
     public boolean isTie() {
