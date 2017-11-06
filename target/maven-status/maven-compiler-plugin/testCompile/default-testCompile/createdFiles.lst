@@ -1,0 +1,6 @@
+ui/RandomThrowAlgorithmTest.class
+game/GameTest.class
+game/ScissorTest.class
+game/PaperTest.class
+game/RockTest.class
+ui/HumanTest.class
